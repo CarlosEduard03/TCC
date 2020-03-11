@@ -3,11 +3,11 @@
 $(document).on("click","#ButtonPreto",function(){
 
     var parametros={
-      "nome":$("#nome").val(),
-      "sobrenome":$("#sobrenome").val(),
-       "CPF":$("#CPF").val(),
-       "email":$("#email").val(),
-       "telefone":$("#telefone").val()
+      "nomeAut":$("#nome").val(),
+      "sobrenomeAut":$("#sobrenome").val(),
+       "cpfAut":$("#CPF").val(),
+       "emailAut":$("#email").val(),
+       "telefoneAut":$("#telefone").val()
     };
     $.ajax({
       type: post,
@@ -17,11 +17,11 @@ $(document).on("click","#ButtonPreto",function(){
     success: function(data){
     navigator.notification.alert(data);
 
-    $("nome").val("");
-    $("sobrenome").val("");
-    $("CPF").val("");
-    $("email").val("");
-    $("telefone").val("");
+    $("nomeAut").val("");
+    $("sobrenomeAut").val("");
+    $("cpfAut").val("");
+    $("emailAut").val("");
+    $("telefoneAut").val("");
       },
    error: function(data){
    navigator.notification.alert("Erro ao cadastrar");
